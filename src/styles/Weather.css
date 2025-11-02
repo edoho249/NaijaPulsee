@@ -1,0 +1,106 @@
+.weather-section {
+  padding: 2rem;
+  background: #0f0f0f;
+  color: #fff;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.weather-section h2 {
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search-bar input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #0f9d58;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.search-bar button:hover {
+  background: #0b6e42;
+}
+
+.error {
+  color: #ff4d4f;
+  margin: 0.5rem 0;
+}
+
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.weather-card {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.weather-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.forecast-swiper {
+  margin-top: 1rem;
+}
+
+.forecast-card {
+  background: #2b2b2b;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.forecast-card p {
+  margin: 0.3rem 0;
+}
+
+.center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Smaller Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0f9d58;
+  width: 25px;
+  height: 25px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px; /* reduced arrow size */
+}
+
+/* Optional: move arrows closer to card edges */
+.swiper-button-next {
+  right: 5px;
+}
+
+.swiper-button-prev {
+  left: 5px;
+}

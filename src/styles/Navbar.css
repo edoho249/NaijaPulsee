@@ -1,0 +1,86 @@
+.navbar {
+  background: #0f9d58;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+
+/* Remove underline and make white for the logo + text link */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none; /* remove underline */
+  color: #fff; /* white text */
+}
+
+.navbar-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: inherit; /* inherit white */
+}
+
+.navbar-left img {
+  height: 40px; /* adjust as needed */
+  width: auto;
+}
+
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    background: #0f9d58;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

@@ -1,0 +1,114 @@
+:root {
+  --np-green: #0f9d58;
+  --np-bg: #f9f9f9;
+  --np-text: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--np-bg);
+  color: var(--np-text);
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background: var(--np-green);
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: 0.3s;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.8rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Content */
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 1rem 2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Dashboard Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--np-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card:hover {
+  background: var(--np-green);
+  color: white;
+  transition: 0.3s;
+}
+
+/* Mobile Sidebar */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: var(--np-green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -100%;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .menu-btn {
+    display: block;
+  }
+}

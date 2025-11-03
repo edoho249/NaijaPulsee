@@ -15,7 +15,7 @@ function News() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const url = `https://newsapi.org/v2/everything?q=politics Nigeria&language=en&pageSize=12&apiKey=${NEWSAPI_KEY}`;
+        const url = `/api/getPoliticalNews`;
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();

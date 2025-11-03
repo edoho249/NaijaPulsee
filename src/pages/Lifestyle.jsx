@@ -15,7 +15,7 @@ function Lifestyle() {
   useEffect(() => {
     const fetchLifestyle = async () => {
       try {
-        const url = `https://newsapi.org/v2/everything?q=music OR entertainment OR football Nigeria&language=en&pageSize=12&apiKey=${NEWSAPI_KEY}`;
+        const url = `/api/getLifestyleNews`;
         const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const data = await res.json();
